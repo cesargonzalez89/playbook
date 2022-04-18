@@ -1,25 +1,22 @@
 /*
-Twitter
-user const user = {user: "carlo", username: "carlogilmar", bio: "...", age: 23}
+Facebook
+post
 */
 
-const repo = {
-  name: "LaunchX",
-  author: "carlogilmar",
-  language: "JavaScript",
-  numberOfCommits: 100,
-  stars: 199,
-  forks: 299,
-  issues_open: 10,
-  issues_close: 10,
-  getTotalIssues: function(){
-    return this.issues_open + this.issues_close
+const post = {
+  title: "vacations",
+  author: "cgr",
+  likes: 100,
+  dislikes: 1,
+  tags: ["vacations","fun","famili"],
+  getTotalReactions: function(){
+    return this.likes + this.dislikes
   },
   getGeneralInfo: function(){
-    return `This repository ${this.name} was created by ${this.author}`
+    return `This post ${this.title} was created by ${this.author}`
   }
  }
  
- console.log("Nombre del repo:" + repo.name)
- console.log("Issues totales: " + repo.getTotalIssues())
- console.log(repo.getGeneralInfo())
+ console.log("Nombre del post: " + post.title)
+ console.log("Reacciones totales: " + post.getTotalReactions())
+ console.log(post.getGeneralInfo())

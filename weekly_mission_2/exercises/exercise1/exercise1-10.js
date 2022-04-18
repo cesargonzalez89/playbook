@@ -1,25 +1,28 @@
+
 /*
-Twitter
-user const user = {user: "carlo", username: "carlogilmar", bio: "...", age: 23}
+Uber
+profile
 */
 
-const repo = {
-  name: "LaunchX",
-  author: "carlogilmar",
-  language: "JavaScript",
-  numberOfCommits: 100,
-  stars: 199,
-  forks: 299,
-  issues_open: 10,
-  issues_close: 10,
-  getTotalIssues: function(){
-    return this.issues_open + this.issues_close
+const profile = {
+  name: "Cesar",
+  lastName: "Cesar",
+  userName: "cgr",
+  age: 27,
+  street: "Calle falsa 123",
+  city: "Racoon city",
+  state: "Guanajuato",
+  country: "Mexico",
+  ranking: 4.6,
+  uberRewards: 1500,
+  getRanking: function(){
+    return this.ranking
   },
   getGeneralInfo: function(){
-    return `This repository ${this.name} was created by ${this.author}`
+    return `The user ${this.name} ${this.lastName} live in ${this.street} ${this.city} ${this.state}`
   }
  }
  
- console.log("Nombre del repo:" + repo.name)
- console.log("Issues totales: " + repo.getTotalIssues())
- console.log(repo.getGeneralInfo())
+ console.log("Nombre del usuario: " + profile.name)
+ console.log("Ranking: " + profile.getRanking())
+ console.log(profile.getGeneralInfo())

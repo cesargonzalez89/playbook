@@ -3,23 +3,21 @@ Twitter
 trending_topic
 */
 
-const repo = {
-  name: "LaunchX",
-  author: "carlogilmar",
-  language: "JavaScript",
-  numberOfCommits: 100,
-  stars: 199,
-  forks: 299,
-  issues_open: 10,
-  issues_close: 10,
-  getTotalIssues: function(){
-    return this.issues_open + this.issues_close
+const trendingTopic = {
+  title: "LaunchX",
+  hashtag:"#launchx",
+  description: "launchx y la calidad de software",
+  qtyTweets: 50000,
+  trend: "Tecnologia",
+  rank: 1,
+  getTrendAndRank: function(){
+    return this.trend + this.rank
   },
   getGeneralInfo: function(){
-    return `This repository ${this.name} was created by ${this.author}`
+    return `This trending ${this.title} has ${this.qtyTweets} tweets`
   }
  }
  
- console.log("Nombre del repo:" + repo.name)
- console.log("Issues totales: " + repo.getTotalIssues())
- console.log(repo.getGeneralInfo())
+ console.log("Nombre del trending:" + trendingTopic.title)
+ console.log("Trend: " + trendingTopic.trend)
+ console.log(trendingTopic.getGeneralInfo())

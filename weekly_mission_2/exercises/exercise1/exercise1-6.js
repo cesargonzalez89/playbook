@@ -3,23 +3,21 @@ Twitter
 hashtag
 */
 
-const repo = {
+const hashtag = {
   name: "LaunchX",
+  hashtag:"#launchx",
+  description: "launchx y la calidad de software",
+  qtyTweets: 500,
+  trend: "Tecnologia",
   author: "carlogilmar",
-  language: "JavaScript",
-  numberOfCommits: 100,
-  stars: 199,
-  forks: 299,
-  issues_open: 10,
-  issues_close: 10,
-  getTotalIssues: function(){
-    return this.issues_open + this.issues_close
+  getTrend: function(){
+    return this.trend
   },
   getGeneralInfo: function(){
-    return `This repository ${this.name} was created by ${this.author}`
+    return `This hashtag ${this.name} has ${this.qtyTweets} tweets`
   }
- }
+}
  
- console.log("Nombre del repo:" + repo.name)
- console.log("Issues totales: " + repo.getTotalIssues())
- console.log(repo.getGeneralInfo())
+ console.log("Nombre del repo:" + hashtag.name)
+ console.log("Issues totales: " + hashtag.getTrend())
+ console.log(hashtag.getGeneralInfo())

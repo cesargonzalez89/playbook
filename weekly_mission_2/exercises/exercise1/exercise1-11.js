@@ -3,23 +3,19 @@ Uber
 travel
 */
 
-const repo = {
-  name: "LaunchX",
-  author: "carlogilmar",
-  language: "JavaScript",
-  numberOfCommits: 100,
-  stars: 199,
-  forks: 299,
-  issues_open: 10,
-  issues_close: 10,
-  getTotalIssues: function(){
-    return this.issues_open + this.issues_close
-  },
-  getGeneralInfo: function(){
-    return `This repository ${this.name} was created by ${this.author}`
+const travel = {
+  userId: 530,
+  userName: "carlogilmar",
+  driverId: 225,
+  driverName: "JPerez",
+  initialPoint: 199,
+  finalPoint: 299,
+  totalKm: 10,
+  cost: 120,
+  getKmsAndCost: function(){
+    return `This travel have ${this.totalKm} kilometers and a cost of ${this.cost}`
   }
  }
  
- console.log("Nombre del repo:" + repo.name)
- console.log("Issues totales: " + repo.getTotalIssues())
- console.log(repo.getGeneralInfo())
+ console.log("Nombre del solicitante: " + travel.userName)
+ console.log(travel.getKmsAndCost())
